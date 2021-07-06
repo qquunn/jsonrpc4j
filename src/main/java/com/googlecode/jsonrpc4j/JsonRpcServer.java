@@ -80,7 +80,7 @@ public class JsonRpcServer extends JsonRpcBasicServer
 	 * @param remoteInterface the interface
 	 */
 	public JsonRpcServer(Object handler, Class<?> remoteInterface) {
-		super(new ObjectMapper(), handler, remoteInterface);
+		super(ObjectMapperFactory.createObjectMapper(), handler, remoteInterface);
 	}
 
 	/**
@@ -90,9 +90,9 @@ public class JsonRpcServer extends JsonRpcBasicServer
 	 * @param handler the {@code handler}
 	 */
 	public JsonRpcServer(Object handler) {
-		super(new ObjectMapper(), handler, null);
+		super(ObjectMapperFactory.createObjectMapper(), handler, null);
 	}
-        
+
 	/**
 	 * Handles a portlet request.
 	 *

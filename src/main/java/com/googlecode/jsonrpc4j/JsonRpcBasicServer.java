@@ -135,7 +135,7 @@ public class JsonRpcBasicServer {
 	 * @param remoteInterface the interface
 	 */
 	public JsonRpcBasicServer(Object handler, Class<?> remoteInterface) {
-		this(new ObjectMapper(), handler, remoteInterface);
+		this(ObjectMapperFactory.createObjectMapper(), handler, remoteInterface);
 	}
 
 	/**
@@ -145,7 +145,7 @@ public class JsonRpcBasicServer {
 	 * @param handler the {@code handler}
 	 */
 	public JsonRpcBasicServer(Object handler) {
-		this(new ObjectMapper(), handler, null);
+		this(ObjectMapperFactory.createObjectMapper(), handler, null);
 	}
 
 	/**

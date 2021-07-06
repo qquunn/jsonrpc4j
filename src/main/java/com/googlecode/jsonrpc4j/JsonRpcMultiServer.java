@@ -71,7 +71,7 @@ public class JsonRpcMultiServer extends JsonRpcServer {
 	private char separator = DEFAULT_SEPARATOR;
 
 	public JsonRpcMultiServer() {
-		this(new ObjectMapper());
+		this(ObjectMapperFactory.createObjectMapper());
 	}
 
 	public JsonRpcMultiServer(ObjectMapper mapper) {
